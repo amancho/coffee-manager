@@ -1,7 +1,7 @@
 {
   "autoload": {
     "psr-4": {
-      "CoffeeManager": "src/CoffeeManager "
+      "CoffeeManager\\": "src/CoffeeManager"
     }
   },
   "autoload-dev": {
