@@ -17,7 +17,7 @@ class OrderCollection extends Collection
      */
     public static function init(): self
     {
-        return new static([]);
+        return new OrderCollection([]);
     }
 
     /**

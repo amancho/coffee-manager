@@ -8,7 +8,7 @@ use CoffeeManager\Domain\Order\OrderCollection;
 use CoffeeManager\Domain\Order\OrderRepository;
 use CoffeeManager\Infrastructure\Console\ShowOrdersCommand;
 use CoffeeManager\Shared\Domain\InvalidCollectionObjectException;
-use Tests\Integration\IntegrationTestCase;
+use CoffeeManager\Tests\Integration\IntegrationTestCase;
 use PHPUnit\Framework\MockObject\MockObject;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Tester\CommandTester;

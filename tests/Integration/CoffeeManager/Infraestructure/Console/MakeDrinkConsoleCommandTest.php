@@ -3,7 +3,7 @@
 namespace CoffeeManager\Tests\Integration\Infraestructure\Console;
 
 use CoffeeManager\Infrastructure\Console\MakeDrinkConsoleCommand;
-use Tests\Integration\IntegrationTestCase;
+use CoffeeManager\Tests\Integration\IntegrationTestCase;
 use Symfony\Component\Console\Tester\CommandTester;
 
 class MakeDrinkConsoleCommandTest extends IntegrationTestCase
