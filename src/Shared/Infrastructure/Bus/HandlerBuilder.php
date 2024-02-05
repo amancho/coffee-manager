@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CoffeeManager\Shared\Infrastructure\Bus;
+namespace App\Shared\Infrastructure\Bus;
 
 use ReflectionClass;
 use ReflectionException;
@@ -35,7 +35,7 @@ final class HandlerBuilder
     private static function extractFirstParam(object|string $class) : string|null
     {
         $reflection = new ReflectionClass($class);
-        $method     = $reflection->getMethod('handle');
+        $method     = $reflection->getMethod('__invoke');
 
         if ($method->getNumberOfParameters() === 1) {
             return $method->getParameters()[0]->getType()?->getName();

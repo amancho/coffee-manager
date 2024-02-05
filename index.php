@@ -1,18 +1,17 @@
 #!/usr/bin/env php
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+use App\Kernel;
+use Symfony\Bundle\FrameworkBundle\Console\Application;
 
-use CoffeeManager\Infrastructure\Console\MakeDrinkConsoleCommand;
-use CoffeeManager\Infrastructure\Console\ShowOrdersCommand;
-use CoffeeManager\Infrastructure\Console\ShowOrdersByDrinkTypeCommand;
-use CoffeeManager\Infrastructure\Persistence\MySql\OrderRepositoryMySql;
-use Symfony\Component\Console\Application;
+if (!is_file(dirname(__DIR__).'/src/vendor/autoload_runtime.php')) {
+    throw new LogicException('Symfony Runtime is missing. Try running "composer require symfony/runtime".');
+}
 
-$application = new Application();
+require_once dirname(__DIR__).'/src/vendor/autoload_runtime.php';
 
-$application->add(new MakeDrinkConsoleCommand());
-$application->add(new ShowOrdersCommand(OrderRepositoryMySql::build()));
-$application->add(new ShowOrdersByDrinkTypeCommand(OrderRepositoryMySql::build()));
+return function (array $context) {
+    $kernel = new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
 
-$application->run();
+    return new Application($kernel);
+};

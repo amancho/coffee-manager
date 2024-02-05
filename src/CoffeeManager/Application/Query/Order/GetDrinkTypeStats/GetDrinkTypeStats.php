@@ -1,11 +1,11 @@
 <?php
 
-namespace CoffeeManager\Application\Query\Order\GetDrinkTypeStats;
+namespace App\CoffeeManager\Application\Query\Order\GetDrinkTypeStats;
 
-use CoffeeManager\Domain\Order\OrderRepository;
-use CoffeeManager\Shared\Bus\Application\Query;
-use CoffeeManager\Shared\Bus\Application\QueryHandler;
-use CoffeeManager\Shared\Bus\Application\QueryResponse;
+use App\CoffeeManager\Domain\Order\OrderRepository;
+use App\Shared\Domain\Bus\Query\Query;
+use App\Shared\Domain\Bus\Query\QueryHandler;
+use App\Shared\Domain\Bus\Query\QueryResponse;
 
 final class GetDrinkTypeStats extends QueryHandler
 {

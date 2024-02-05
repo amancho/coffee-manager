@@ -1,12 +1,12 @@
 <?php
 
-namespace CoffeeManager\Application\Query\Order\GetOrders;
+namespace App\CoffeeManager\Application\Query\Order\GetOrders;
 
-use CoffeeManager\Domain\Order\OrderRepository;
-use CoffeeManager\Shared\Bus\Application\Query;
-use CoffeeManager\Shared\Bus\Application\QueryHandler;
-use CoffeeManager\Shared\Bus\Application\QueryResponse;
-use CoffeeManager\Shared\Domain\InvalidCollectionObjectException;
+use App\CoffeeManager\Domain\Order\OrderRepository;
+use App\Shared\Domain\Bus\Query\Query;
+use App\Shared\Domain\Bus\Query\QueryHandler;
+use App\Shared\Domain\Bus\Query\QueryResponse;
+use App\Shared\Domain\InvalidCollectionObjectException;
 
 final class GetOrders extends QueryHandler
 {

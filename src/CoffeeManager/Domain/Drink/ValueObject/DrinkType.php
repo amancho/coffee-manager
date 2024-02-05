@@ -1,10 +1,10 @@
 <?php
 
-namespace CoffeeManager\Domain\Drink\ValueObject;
+namespace App\CoffeeManager\Domain\Drink\ValueObject;
 
-use CoffeeManager\Domain\Drink\Enum\DrinkTypes;
-use CoffeeManager\Domain\Drink\Error\DrinkNotFound;
-use CoffeeManager\Shared\Domain\ValueObject\StringValueObject;
+use App\CoffeeManager\Domain\Drink\Enum\DrinkTypes;
+use App\CoffeeManager\Domain\Drink\Error\DrinkNotFound;
+use App\Shared\Domain\ValueObject\StringValueObject;
 
 final class DrinkType extends StringValueObject
 {

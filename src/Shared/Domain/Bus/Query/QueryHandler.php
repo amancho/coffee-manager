@@ -1,6 +1,6 @@
 <?php
 
-namespace CoffeeManager\Shared\Bus\Application;
+namespace App\Shared\Domain\Bus\Query;
 
 abstract class QueryHandler
 {

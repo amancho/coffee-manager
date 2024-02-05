@@ -1,13 +1,13 @@
 <?php
 
-namespace CoffeeManager\Domain\Order;
+namespace App\CoffeeManager\Domain\Order;
 
-use CoffeeManager\Domain\Drink\ValueObject\DrinkPrice;
-use CoffeeManager\Domain\Drink\ValueObject\DrinkType;
-use CoffeeManager\Domain\Order\ValueObject\OrderExtraHot;
-use CoffeeManager\Domain\Order\ValueObject\OrderPrice;
-use CoffeeManager\Domain\Order\ValueObject\OrderStick;
-use CoffeeManager\Domain\Order\ValueObject\OrderSugar;
+use App\CoffeeManager\Domain\Drink\ValueObject\DrinkPrice;
+use App\CoffeeManager\Domain\Drink\ValueObject\DrinkType;
+use App\CoffeeManager\Domain\Order\ValueObject\OrderExtraHot;
+use App\CoffeeManager\Domain\Order\ValueObject\OrderPrice;
+use App\CoffeeManager\Domain\Order\ValueObject\OrderStick;
+use App\CoffeeManager\Domain\Order\ValueObject\OrderSugar;
 
 final class Order
 {

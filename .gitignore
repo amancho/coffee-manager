@@ -1,6 +1,8 @@
 /coverage/
 /.idea
+/var/
 /vendor/
 /.phpunit.result.cache
 /coverage.xml
 /test.xml
+/.env

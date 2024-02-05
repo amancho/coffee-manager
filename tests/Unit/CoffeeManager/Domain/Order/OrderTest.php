@@ -2,10 +2,10 @@
 
 namespace GetWith\CoffeeMachine\Tests\Unit\CoffeeManager\Domain\Order;
 
-use CoffeeManager\Domain\Drink\Enum\DrinkPrices;
-use CoffeeManager\Domain\Drink\Enum\DrinkTypes;
-use CoffeeManager\Domain\Drink\Error\DrinkNotFound;
-use CoffeeManager\Domain\Order\Order;
+use App\CoffeeManager\Domain\Drink\Enum\DrinkPrices;
+use App\CoffeeManager\Domain\Drink\Enum\DrinkTypes;
+use App\CoffeeManager\Domain\Drink\Error\DrinkNotFound;
+use App\CoffeeManager\Domain\Order\Order;
 use PHPUnit\Framework\TestCase;
 
 class OrderTest extends TestCase

@@ -1,8 +1,8 @@
 <?php
 
-namespace CoffeeManager\Domain\Order;
+namespace App\CoffeeManager\Domain\Order;
 
-use CoffeeManager\Shared\Domain\InvalidCollectionObjectException;
+use App\Shared\Domain\InvalidCollectionObjectException;
 
 interface OrderRepository
 {

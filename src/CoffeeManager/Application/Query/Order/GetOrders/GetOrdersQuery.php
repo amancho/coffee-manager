@@ -1,8 +1,8 @@
 <?php
 
-namespace CoffeeManager\Application\Query\Order\GetOrders;
+namespace App\CoffeeManager\Application\Query\Order\GetOrders;
 
-use CoffeeManager\Shared\Bus\Application\Query;
+use App\Shared\Domain\Bus\Query\Query;
 
 final class GetOrdersQuery implements Query
 {

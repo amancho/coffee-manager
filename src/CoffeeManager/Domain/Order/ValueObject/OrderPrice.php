@@ -1,8 +1,8 @@
 <?php
 
-namespace CoffeeManager\Domain\Order\ValueObject;
+namespace App\CoffeeManager\Domain\Order\ValueObject;
 
-use CoffeeManager\Shared\Domain\ValueObject\FloatValueObject;
+use App\Shared\Domain\ValueObject\FloatValueObject;
 
 final class OrderPrice extends FloatValueObject
 {

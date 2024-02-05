@@ -1,13 +1,18 @@
 <?php
 
-namespace CoffeeManager\Shared\Infrastructure\Persistence\MySql;
+namespace App\Shared\Infrastructure\Persistence\MySql;
 
 use PDO;
 use PDOException;
 
-final class MySqlRepository
+final class MySqlRepository extends PDO
 {
     private static $pdo;
+
+    public function __construct(string $dsn, ?string $username = null, ?string $password = null, ?array $options = null)
+    {
+        parent::__construct($dsn, $username, $password, $options);
+    }
 
     public static function getClient(): PDO
     {

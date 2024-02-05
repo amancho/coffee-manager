@@ -1,10 +1,10 @@
 <?php
 
-namespace CoffeeManager\Domain\Drink;
+namespace App\CoffeeManager\Domain\Drink;
 
-use CoffeeManager\Domain\Drink\Error\DrinkIncorrectSugar;
-use CoffeeManager\Domain\Drink\Error\DrinkLackOfMoney;
-use CoffeeManager\Domain\Drink\ValueObject\DrinkPrice;
+use App\CoffeeManager\Domain\Drink\Error\DrinkIncorrectSugar;
+use App\CoffeeManager\Domain\Drink\Error\DrinkLackOfMoney;
+use App\CoffeeManager\Domain\Drink\ValueObject\DrinkPrice;
 
 final class DrinkService
 {

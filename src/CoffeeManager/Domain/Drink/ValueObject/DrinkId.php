@@ -1,8 +1,8 @@
 <?php
 
-namespace CoffeeManager\Domain\Drink\ValueObject;
+namespace App\CoffeeManager\Domain\Drink\ValueObject;
 
-use CoffeeManager\Shared\Domain\ValueObject\IntValueObject;
+use App\Shared\Domain\ValueObject\IntValueObject;
 
 final class DrinkId extends IntValueObject
 {

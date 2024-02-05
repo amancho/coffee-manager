@@ -1,8 +1,8 @@
 <?php
 
-namespace CoffeeManager\Domain\Drink\ValueObject;
+namespace App\CoffeeManager\Domain\Drink\ValueObject;
 
-use CoffeeManager\Shared\Domain\ValueObject\StringValueObject;
+use App\Shared\Domain\ValueObject\StringValueObject;
 
 final class DrinkName extends StringValueObject
 {

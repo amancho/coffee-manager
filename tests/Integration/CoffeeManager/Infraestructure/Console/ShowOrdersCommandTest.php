@@ -2,12 +2,12 @@
 
 namespace CoffeeManager\Tests\Integration\Infraestructure\Console;
 
-use CoffeeManager\Domain\Drink\Drink;
-use CoffeeManager\Domain\Order\Order;
-use CoffeeManager\Domain\Order\OrderCollection;
-use CoffeeManager\Domain\Order\OrderRepository;
-use CoffeeManager\Infrastructure\Console\ShowOrdersCommand;
-use CoffeeManager\Shared\Domain\InvalidCollectionObjectException;
+use App\CoffeeManager\Domain\Drink\Drink;
+use App\CoffeeManager\Domain\Order\Order;
+use App\CoffeeManager\Domain\Order\OrderCollection;
+use App\CoffeeManager\Domain\Order\OrderRepository;
+use App\CoffeeManager\Infrastructure\Console\ShowOrdersCommand;
+use App\Shared\Domain\InvalidCollectionObjectException;
 use CoffeeManager\Tests\Integration\IntegrationTestCase;
 use PHPUnit\Framework\MockObject\MockObject;
 use Symfony\Component\Console\Command\Command;

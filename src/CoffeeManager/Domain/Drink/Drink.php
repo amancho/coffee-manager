@@ -1,10 +1,10 @@
 <?php
 
-namespace CoffeeManager\Domain\Drink;
+namespace App\CoffeeManager\Domain\Drink;
 
-use CoffeeManager\Domain\Drink\ValueObject\DrinkId;
-use CoffeeManager\Domain\Drink\ValueObject\DrinkName;
-use CoffeeManager\Domain\Drink\ValueObject\DrinkPrice;
+use App\CoffeeManager\Domain\Drink\ValueObject\DrinkId;
+use App\CoffeeManager\Domain\Drink\ValueObject\DrinkName;
+use App\CoffeeManager\Domain\Drink\ValueObject\DrinkPrice;
 
 final class Drink
 {

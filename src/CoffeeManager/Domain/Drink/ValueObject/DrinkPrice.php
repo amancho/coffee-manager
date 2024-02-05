@@ -1,11 +1,11 @@
 <?php
 
-namespace CoffeeManager\Domain\Drink\ValueObject;
+namespace App\CoffeeManager\Domain\Drink\ValueObject;
 
-use CoffeeManager\Domain\Drink\Enum\DrinkPrices;
-use CoffeeManager\Domain\Drink\Enum\DrinkTypes;
-use CoffeeManager\Domain\Drink\Error\DrinkNotFound;
-use CoffeeManager\Shared\Domain\ValueObject\FloatValueObject;
+use App\CoffeeManager\Domain\Drink\Enum\DrinkPrices;
+use App\CoffeeManager\Domain\Drink\Enum\DrinkTypes;
+use App\CoffeeManager\Domain\Drink\Error\DrinkNotFound;
+use App\Shared\Domain\ValueObject\FloatValueObject;
 
 final class DrinkPrice extends FloatValueObject
 {

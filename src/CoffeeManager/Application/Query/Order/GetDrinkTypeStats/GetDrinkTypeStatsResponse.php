@@ -1,8 +1,8 @@
 <?php
 
-namespace CoffeeManager\Application\Query\Order\GetDrinkTypeStats;
+namespace App\CoffeeManager\Application\Query\Order\GetDrinkTypeStats;
 
-use CoffeeManager\Shared\Bus\Application\QueryResponse;
+use App\Shared\Domain\Bus\Query\QueryResponse;
 
 final readonly class GetDrinkTypeStatsResponse implements QueryResponse
 {

@@ -2,11 +2,11 @@
 
 namespace Tests\Unit\CoffeeManager\Domain\Drink;
 
-use CoffeeManager\Domain\Drink\DrinkService;
-use CoffeeManager\Domain\Drink\Enum\DrinkTypes;
-use CoffeeManager\Domain\Drink\Error\DrinkIncorrectSugar;
-use CoffeeManager\Domain\Drink\Error\DrinkLackOfMoney;
-use CoffeeManager\Domain\Drink\Error\DrinkNotFound;
+use App\CoffeeManager\Domain\Drink\DrinkService;
+use App\CoffeeManager\Domain\Drink\Enum\DrinkTypes;
+use App\CoffeeManager\Domain\Drink\Error\DrinkIncorrectSugar;
+use App\CoffeeManager\Domain\Drink\Error\DrinkLackOfMoney;
+use App\CoffeeManager\Domain\Drink\Error\DrinkNotFound;
 use PHPUnit\Framework\TestCase;
 
 final class DrinkServiceTest extends TestCase

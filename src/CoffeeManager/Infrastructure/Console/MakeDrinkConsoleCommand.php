@@ -1,14 +1,14 @@
 <?php
 
-namespace CoffeeManager\Infrastructure\Console;
+namespace App\CoffeeManager\Infrastructure\Console;
 
-use CoffeeManager\Application\Command\Drink\MakeDrinkCommand;
-use CoffeeManager\Application\Command\Drink\MakeDrinkCommandHandler;
-use CoffeeManager\Application\Command\Order\StoreOrderCommand;
-use CoffeeManager\Application\Command\Order\StoreOrderCommandHandler;
-use CoffeeManager\Domain\Drink\DrinkService;
-use CoffeeManager\Domain\Order\Order;
-use CoffeeManager\Infrastructure\Persistence\MySql\OrderRepositoryMySql;
+use App\CoffeeManager\Application\Command\Drink\MakeDrinkCommand;
+use App\CoffeeManager\Application\Command\Drink\MakeDrinkCommandHandler;
+use App\CoffeeManager\Application\Command\Order\StoreOrderCommand;
+use App\CoffeeManager\Application\Command\Order\StoreOrderCommandHandler;
+use App\CoffeeManager\Domain\Drink\DrinkService;
+use App\CoffeeManager\Infrastructure\Persistence\MySql\OrderRepositoryMySql;
+use App\Shared\Domain\Bus\Command\CommandBus;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -17,11 +17,9 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class MakeDrinkConsoleCommand extends Command
 {
-    protected static $defaultName = 'app:order-drink';
-
-    public function __construct()
+    public function __construct(private readonly CommandBus $commandBus)
     {
-        parent::__construct(MakeDrinkConsoleCommand::$defaultName);
+        parent::__construct('app:order-drink');
     }
 
     protected function configure(): void
@@ -47,7 +45,7 @@ class MakeDrinkConsoleCommand extends Command
 
         $this->addOption(
             'extra-hot',
-            'e',
+            'extra',
             InputOption::VALUE_NONE,
             $description = 'If the user wants to make the drink extra hot'
         );
@@ -67,14 +65,13 @@ class MakeDrinkConsoleCommand extends Command
             $makeDrinkCommandHandler = new MakeDrinkCommandHandler(new DrinkService());
             $output->writeln($makeDrinkCommandHandler->handle($makeDrinkCommand));
 
-            $storeOrderCommand = StoreOrderCommand::create(
-                $makeDrinkCommand->type(),
-                $makeDrinkCommand->sugars(),
-                $makeDrinkCommand->extraHot(),
+            $this->commandBus->handle(
+                StoreOrderCommand::create(
+                    $makeDrinkCommand->type(),
+                    $makeDrinkCommand->sugars(),
+                    $makeDrinkCommand->extraHot(),
+                )
             );
-
-            $storeOrderCommandHandler = new StoreOrderCommandHandler(OrderRepositoryMySql::build());
-            $storeOrderCommandHandler->handle($storeOrderCommand);
 
         } catch (\Exception $ex) {
             $output->writeln($ex->getMessage());

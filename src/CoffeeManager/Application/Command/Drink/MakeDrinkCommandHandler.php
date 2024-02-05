@@ -1,11 +1,11 @@
 <?php
 
-namespace CoffeeManager\Application\Command\Drink;
+namespace App\CoffeeManager\Application\Command\Drink;
 
-use CoffeeManager\Domain\Drink\DrinkService;
-use CoffeeManager\Shared\Bus\Application\Handler;
+use App\CoffeeManager\Domain\Drink\DrinkService;
+use App\Shared\Domain\Bus\Command\CommandHandler;
 
-readonly class MakeDrinkCommandHandler implements Handler
+readonly class MakeDrinkCommandHandler implements CommandHandler
 {
 
     public function __construct(

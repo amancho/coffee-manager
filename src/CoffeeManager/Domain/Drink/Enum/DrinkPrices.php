@@ -1,6 +1,6 @@
 <?php
 
-namespace CoffeeManager\Domain\Drink\Enum;
+namespace App\CoffeeManager\Domain\Drink\Enum;
 
 enum DrinkPrices: string
 {

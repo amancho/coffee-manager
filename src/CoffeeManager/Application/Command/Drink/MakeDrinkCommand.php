@@ -1,8 +1,8 @@
 <?php
 
-namespace CoffeeManager\Application\Command\Drink;
+namespace App\CoffeeManager\Application\Command\Drink;
 
-use CoffeeManager\Shared\Bus\Application\Command;
+use App\Shared\Domain\Bus\Command\Command;
 
 readonly class MakeDrinkCommand implements Command
 {

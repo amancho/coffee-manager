@@ -2,9 +2,9 @@
 
 namespace GetWith\CoffeeMachine\Tests\Unit\CoffeeManager\Domain\Drink\ValueObject;
 
-use CoffeeManager\Domain\Drink\Enum\DrinkTypes;
-use CoffeeManager\Domain\Drink\Error\DrinkNotFound;
-use CoffeeManager\Domain\Drink\ValueObject\DrinkPrice;
+use App\CoffeeManager\Domain\Drink\Enum\DrinkTypes;
+use App\CoffeeManager\Domain\Drink\Error\DrinkNotFound;
+use App\CoffeeManager\Domain\Drink\ValueObject\DrinkPrice;
 use PHPUnit\Framework\TestCase;
 
 class DrinkPriceTest extends TestCase

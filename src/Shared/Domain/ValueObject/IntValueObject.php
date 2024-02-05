@@ -1,5 +1,5 @@
 <?php
-namespace CoffeeManager\Shared\Domain\ValueObject;
+namespace App\Shared\Domain\ValueObject;
 
 abstract class IntValueObject
 {

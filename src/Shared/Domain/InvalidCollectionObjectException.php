@@ -1,6 +1,6 @@
 <?php
 
-namespace CoffeeManager\Shared\Domain;
+namespace App\Shared\Domain;
 
 class InvalidCollectionObjectException extends \Exception
 {

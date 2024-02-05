@@ -1,11 +1,11 @@
 <?php
 
-namespace CoffeeManager\Infrastructure\Console;
+namespace App\CoffeeManager\Infrastructure\Console;
 
-use CoffeeManager\Application\Query\Order\GetOrders\GetOrders;
-use CoffeeManager\Application\Query\Order\GetOrders\GetOrdersQuery;
-use CoffeeManager\Application\Query\Order\GetOrders\GetOrdersResponse;
-use CoffeeManager\Domain\Order\OrderRepository;
+use App\CoffeeManager\Application\Query\Order\GetOrders\GetOrders;
+use App\CoffeeManager\Application\Query\Order\GetOrders\GetOrdersQuery;
+use App\CoffeeManager\Application\Query\Order\GetOrders\GetOrdersResponse;
+use App\CoffeeManager\Domain\Order\OrderRepository;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

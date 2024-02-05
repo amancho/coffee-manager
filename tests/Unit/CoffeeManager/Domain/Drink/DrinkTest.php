@@ -2,10 +2,10 @@
 
 namespace GetWith\CoffeeMachine\Tests\Unit\CoffeeManager\Domain\Drink;
 
-use CoffeeManager\Domain\Drink\Drink;
-use CoffeeManager\Domain\Drink\ValueObject\DrinkId;
-use CoffeeManager\Domain\Drink\ValueObject\DrinkName;
-use CoffeeManager\Domain\Drink\ValueObject\DrinkPrice;
+use App\CoffeeManager\Domain\Drink\Drink;
+use App\CoffeeManager\Domain\Drink\ValueObject\DrinkId;
+use App\CoffeeManager\Domain\Drink\ValueObject\DrinkName;
+use App\CoffeeManager\Domain\Drink\ValueObject\DrinkPrice;
 
 use PHPUnit\Framework\TestCase;
 

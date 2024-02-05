@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CoffeeManager\Shared\Infrastructure\Bus\Command;
+namespace App\Shared\Infrastructure\Bus\Command;
 
-use CoffeeManager\Shared\Bus\Application\Command;
-use CoffeeManager\Shared\Bus\Domain\CommandBus;
-use CoffeeManager\Shared\Infrastructure\Bus\HandlerBuilder;
+use App\Shared\Domain\Bus\Command\Command;
+use App\Shared\Domain\Bus\Command\CommandBus;
+use App\Shared\Infrastructure\Bus\HandlerBuilder;
 use InvalidArgumentException;
 use ReflectionException;
 use Symfony\Component\Messenger\Exception\HandlerFailedException;
@@ -24,7 +24,7 @@ final class InMemoryCommandBus implements CommandBus
      * @throws ReflectionException
      */
     public function __construct(
-        iterable $commandHandlers
+        iterable $commandHandlers = []
     ) {
         $this->bus = new MessageBus([
             new HandleMessageMiddleware(
@@ -43,7 +43,7 @@ final class InMemoryCommandBus implements CommandBus
         try {
             $this->bus->dispatch($command);
         } catch (NoHandlerForMessageException $e) {
-            throw new InvalidArgumentException(sprintf('The command has not a valid handler: %s', $command::class));
+            throw new InvalidArgumentException(sprintf('The command has not a valid handler: %s', $e->getMessage()));
         } catch (HandlerFailedException $e) {
             throw $e->getPrevious();
         }

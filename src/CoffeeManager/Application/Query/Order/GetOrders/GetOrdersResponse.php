@@ -1,10 +1,10 @@
 <?php
 
-namespace CoffeeManager\Application\Query\Order\GetOrders;
+namespace App\CoffeeManager\Application\Query\Order\GetOrders;
 
-use CoffeeManager\Domain\Order\Order;
-use CoffeeManager\Domain\Order\OrderCollection;
-use CoffeeManager\Shared\Bus\Application\QueryResponse;
+use App\CoffeeManager\Domain\Order\Order;
+use App\CoffeeManager\Domain\Order\OrderCollection;
+use App\Shared\Domain\Bus\Query\QueryResponse;
 
 final readonly class GetOrdersResponse implements QueryResponse
 {

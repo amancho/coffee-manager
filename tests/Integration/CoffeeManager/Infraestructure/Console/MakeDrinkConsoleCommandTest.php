@@ -2,7 +2,9 @@
 
 namespace CoffeeManager\Tests\Integration\Infraestructure\Console;
 
-use CoffeeManager\Infrastructure\Console\MakeDrinkConsoleCommand;
+use App\CoffeeManager\Domain\Order\OrderRepository;
+use App\CoffeeManager\Infrastructure\Console\MakeDrinkConsoleCommand;
+use App\Shared\Domain\Bus\Command\CommandBus;
 use CoffeeManager\Tests\Integration\IntegrationTestCase;
 use Symfony\Component\Console\Tester\CommandTester;
 
@@ -12,7 +14,8 @@ class MakeDrinkConsoleCommandTest extends IntegrationTestCase
     {
         parent::setUp();
 
-        $this->application->add(new MakeDrinkConsoleCommand());
+        $commandBus = $this->createMock(CommandBus::class);
+        $this->application->add(new MakeDrinkConsoleCommand($commandBus));
     }
 
     /**

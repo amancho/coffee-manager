@@ -1,8 +1,8 @@
 <?php
 
-namespace CoffeeManager\Domain\Order\ValueObject;
+namespace App\CoffeeManager\Domain\Order\ValueObject;
 
-use CoffeeManager\Shared\Domain\ValueObject\IntValueObject;
+use App\Shared\Domain\ValueObject\IntValueObject;
 
 final class OrderSugar extends IntValueObject
 {

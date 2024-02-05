@@ -1,5 +1,5 @@
 <?php
-namespace CoffeeManager\Shared\Domain;
+namespace App\Shared\Domain;
 
 use ArrayIterator;
 use Countable;

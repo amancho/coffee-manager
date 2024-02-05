@@ -2,12 +2,12 @@
 
 namespace CoffeeManager\Tests\Integration\Application\Query\Order;
 
-use CoffeeManager\Application\Query\Order\GetOrders\GetOrders;
-use CoffeeManager\Application\Query\Order\GetOrders\GetOrdersQuery;
-use CoffeeManager\Domain\Order\Order;
-use CoffeeManager\Domain\Order\OrderCollection;
-use CoffeeManager\Domain\Order\OrderRepository;
-use CoffeeManager\Shared\Domain\InvalidCollectionObjectException;
+use App\CoffeeManager\Application\Query\Order\GetOrders\GetOrders;
+use App\CoffeeManager\Application\Query\Order\GetOrders\GetOrdersQuery;
+use App\CoffeeManager\Domain\Order\Order;
+use App\CoffeeManager\Domain\Order\OrderCollection;
+use App\CoffeeManager\Domain\Order\OrderRepository;
+use App\Shared\Domain\InvalidCollectionObjectException;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 

@@ -1,18 +1,18 @@
 <?php
 
-namespace CoffeeManager\Application\Command\Order;
+namespace App\CoffeeManager\Application\Command\Order;
 
-use CoffeeManager\Domain\Order\Order;
-use CoffeeManager\Domain\Order\OrderRepository;
-use CoffeeManager\Shared\Bus\Application\Handler;
+use App\CoffeeManager\Domain\Order\Order;
+use App\CoffeeManager\Domain\Order\OrderRepository;
+use App\Shared\Domain\Bus\Command\CommandHandler;
 
-readonly class StoreOrderCommandHandler implements Handler
+readonly class StoreOrderCommandHandler implements CommandHandler
 {
     public function __construct(private OrderRepository $repository)
     {
     }
 
-    public function handle(StoreOrderCommand $command): void
+    public function __invoke(StoreOrderCommand $command): void
     {
         $order = Order::buildBasic(
             $command->type(),

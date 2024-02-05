@@ -1,12 +1,12 @@
 <?php
 
-namespace CoffeeManager\Infrastructure\Persistence\MySql;
+namespace App\CoffeeManager\Infrastructure\Persistence\MySql;
 
-use CoffeeManager\Domain\Order\Order;
-use CoffeeManager\Domain\Order\OrderCollection;
-use CoffeeManager\Domain\Order\OrderRepository;
-use CoffeeManager\Shared\Domain\InvalidCollectionObjectException;
-use CoffeeManager\Shared\Infrastructure\Persistence\MySql\MySqlRepository;
+use App\CoffeeManager\Domain\Order\Order;
+use App\CoffeeManager\Domain\Order\OrderCollection;
+use App\CoffeeManager\Domain\Order\OrderRepository;
+use App\Shared\Infrastructure\Persistence\MySql\MySqlRepository;
+use App\Shared\Domain\InvalidCollectionObjectException;
 use PDO;
 
 final class OrderRepositoryMySql implements OrderRepository

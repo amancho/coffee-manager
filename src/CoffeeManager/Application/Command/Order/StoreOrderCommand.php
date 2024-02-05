@@ -1,16 +1,15 @@
 <?php
 
-namespace CoffeeManager\Application\Command\Order;
+namespace App\CoffeeManager\Application\Command\Order;
 
-use CoffeeManager\Domain\Order\Order;
-use CoffeeManager\Shared\Bus\Application\Command;
+use App\Shared\Domain\Bus\Command\Command;
 
 readonly class StoreOrderCommand implements Command
 {
     public function __construct(
-        private readonly string $type,
-        private readonly int $sugar,
-        private readonly bool $extraHot
+        private string $type,
+        private int $sugar,
+        private bool $extraHot
     )
     {
     }

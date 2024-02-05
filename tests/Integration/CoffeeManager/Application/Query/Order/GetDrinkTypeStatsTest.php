@@ -2,9 +2,9 @@
 
 namespace CoffeeManager\Tests\Integration\Application\Query\Order;
 
-use CoffeeManager\Application\Query\Order\GetDrinkTypeStats\GetDrinkTypeStats;
-use CoffeeManager\Application\Query\Order\GetDrinkTypeStats\GetDrinkTypeStatsQuery;
-use CoffeeManager\Domain\Order\OrderRepository;
+use App\CoffeeManager\Application\Query\Order\GetDrinkTypeStats\GetDrinkTypeStats;
+use App\CoffeeManager\Application\Query\Order\GetDrinkTypeStats\GetDrinkTypeStatsQuery;
+use App\CoffeeManager\Domain\Order\OrderRepository;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 

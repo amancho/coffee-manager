@@ -1,11 +1,11 @@
 <?php
 
-namespace CoffeeManager\Infrastructure\Console;
+namespace App\CoffeeManager\Infrastructure\Console;
 
-use CoffeeManager\Application\Query\Order\GetDrinkTypeStats\GetDrinkTypeStats;
-use CoffeeManager\Application\Query\Order\GetDrinkTypeStats\GetDrinkTypeStatsQuery;
-use CoffeeManager\Application\Query\Order\GetDrinkTypeStats\GetDrinkTypeStatsResponse;
-use CoffeeManager\Domain\Order\OrderRepository;
+use App\CoffeeManager\Application\Query\Order\GetDrinkTypeStats\GetDrinkTypeStats;
+use App\CoffeeManager\Application\Query\Order\GetDrinkTypeStats\GetDrinkTypeStatsQuery;
+use App\CoffeeManager\Application\Query\Order\GetDrinkTypeStats\GetDrinkTypeStatsResponse;
+use App\CoffeeManager\Domain\Order\OrderRepository;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

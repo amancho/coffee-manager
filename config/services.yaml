@@ -1,0 +1,60 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+
+services:
+  # default configuration for services in *this* file
+  _defaults:
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+  _instanceof:
+
+    App\CoffeeManager\Application\Command\Drink\MakeDrinkCommandHandler:
+      tags: ['MakeDrinkCommandHandler']
+
+    App\Shared\Domain\Bus\Command\CommandHandler:
+      tags: ['internal.command_handler']
+
+    App\Shared\Domain\Bus\Query\QueryHandler:
+      tags: ['internal.query_handler']
+
+  store_order_command:
+    class: App\CoffeeManager\Application\Command\Order\StoreOrderCommand
+
+  store_order_command_handler:
+      class: App\CoffeeManager\Application\Command\Order\StoreOrderCommandHandler
+      arguments: [ App\Shared\Infrastructure\Persistence\MySql\MySqlRepository ]
+      tags:
+        - { name: internal.command_handler, handles: store_order }
+
+
+  # makes classes in src/ available to be used as services
+  # this creates a service per class whose id is the fully-qualified class name
+  App\:
+    resource: '../src/'
+    exclude:
+      - '../src/Kernel.php'
+
+  ### Buses
+  App\Shared\Infrastructure\Bus\CommandBus:
+    class: App\CoffeeManager\Shared\Infrastructure\Bus\InMemoryCommandBus
+    arguments: [ !tagged internal.command_handler ]
+
+  App\Shared\Infrastructure\Bus\QueryBus:
+    class: App\CoffeeManager\Shared\Infrastructure\Bus\Query\InMemoryQueryBus
+    arguments: [ !tagged internal.query_handler ]
+
+  App\CoffeeManager\Infrastructure\Persistence\MySql\OrderRepositoryMySql:
+    arguments:
+      - $client: '@App\Shared\Infrastructure\Persistence\MySql\MySqlRepository'
+
+  App\Shared\Infrastructure\Persistence\MySql\MySqlRepository:
+    arguments:
+      [ 'mysql:host=coffee-machine.mysql;dbname=coffee_machine;charset=utf8', 'coffee-machine', 'coffee-machine']
+
+  # add more service definitions when explicit configuration is needed
+  # please note that last definitions always *replace* previous ones

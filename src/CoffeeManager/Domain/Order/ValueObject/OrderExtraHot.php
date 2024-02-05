@@ -1,8 +1,8 @@
 <?php
 
-namespace CoffeeManager\Domain\Order\ValueObject;
+namespace App\CoffeeManager\Domain\Order\ValueObject;
 
-use CoffeeManager\Shared\Domain\ValueObject\BooleanValueObject;
+use App\Shared\Domain\ValueObject\BooleanValueObject;
 
 final class OrderExtraHot extends BooleanValueObject
 {

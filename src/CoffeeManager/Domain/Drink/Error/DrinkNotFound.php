@@ -1,8 +1,8 @@
 <?php
 
-namespace CoffeeManager\Domain\Drink\Error;
+namespace App\CoffeeManager\Domain\Drink\Error;
 
-use CoffeeManager\Shared\Domain\DomainError;
+use App\Shared\Domain\DomainError;
 
 final class DrinkNotFound extends DomainError
 {

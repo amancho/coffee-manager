@@ -1,8 +1,8 @@
 <?php
 
-namespace CoffeeManager\Application\Query\Order\GetDrinkTypeStats;
+namespace App\CoffeeManager\Application\Query\Order\GetDrinkTypeStats;
 
-use CoffeeManager\Shared\Bus\Application\Query;
+use App\Shared\Domain\Bus\Query\Query;
 
 final class GetDrinkTypeStatsQuery implements Query
 {
