@@ -7,17 +7,31 @@ use CoffeeManager\Shared\Bus\Application\Command;
 
 readonly class StoreOrderCommand implements Command
 {
-    public function __construct(private Order $order)
+    public function __construct(
+        private readonly string $type,
+        private readonly int $sugar,
+        private readonly bool $extraHot
+    )
     {
     }
 
-    public static function create(Order $order): StoreOrderCommand
+    public static function create(string $type, int $sugar, bool $extraHot): StoreOrderCommand
     {
-        return new self($order);
+        return new self($type, $sugar, $extraHot);
     }
 
-    public function order(): Order
+    public function type(): string
     {
-        return $this->order;
+        return $this->type;
+    }
+
+    public function sugar(): int
+    {
+        return $this->sugar;
+    }
+
+    public function extraHot(): bool
+    {
+        return $this->extraHot;
     }
 }

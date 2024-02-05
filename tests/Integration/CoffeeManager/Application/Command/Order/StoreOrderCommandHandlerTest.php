@@ -40,6 +40,11 @@ class StoreOrderCommandHandlerTest extends TestCase
             ->method('store')
             ->with($order);
 
-        $this->handler->handle(new StoreOrderCommand($order));
+        $this->handler->handle(new StoreOrderCommand(
+                $order->type()->value(),
+                $order->sugar()->value(),
+                $order->extraHot()->value()
+            )
+        );
     }
 }

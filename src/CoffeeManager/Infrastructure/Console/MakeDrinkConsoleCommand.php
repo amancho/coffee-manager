@@ -68,11 +68,9 @@ class MakeDrinkConsoleCommand extends Command
             $output->writeln($makeDrinkCommandHandler->handle($makeDrinkCommand));
 
             $storeOrderCommand = StoreOrderCommand::create(
-                Order::buildBasic(
-                    $makeDrinkCommand->type(),
-                    $makeDrinkCommand->sugars(),
-                    $makeDrinkCommand->extraHot(),
-                )
+                $makeDrinkCommand->type(),
+                $makeDrinkCommand->sugars(),
+                $makeDrinkCommand->extraHot(),
             );
 
             $storeOrderCommandHandler = new StoreOrderCommandHandler(OrderRepositoryMySql::build());
